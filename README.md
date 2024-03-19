@@ -24,3 +24,5 @@ This is a web application for ordering food online. Users can browse through ava
   <li><strong>Run the Application:</strong> After successful installation of packages and mongoDB set up run the server in VSCode with the help of the command nodemon server.js and then go to the local host at port number 9000 in your web browser.</li>
 </ul>
 
+## Permission To use
+You can use this project as a part of your learning, and to showcase the project please mention https://github.com/Kapoor-Tushar.

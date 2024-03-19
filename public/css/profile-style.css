@@ -1,0 +1,151 @@
+.heading-container {
+  text-decoration: none;
+}
+.heading-text,
+.heading-text:visited {
+  display: inline;
+  font-size: 2rem;
+  position: relative;
+  bottom: 20px;
+  color: #01696e;
+}
+.content-conatiner {
+  display: grid;
+  grid-template-areas: "a b";
+  height: 85%;
+}
+.side-options-container {
+  width: 20vw;
+  background-color: #01696e;
+  color: aliceblue;
+  font-size: 1.4rem;
+}
+.profile-link,
+.orders-link,
+.billing-link {
+  display: block;
+  padding-top: 2rem;
+  padding-left: 4rem;
+  cursor: pointer;
+}
+.profile-link:hover,
+.orders-link:hover,
+.billing-link:hover {
+  font-size: 1.6rem;
+  text-decoration: underline solid aliceblue 2px;
+}
+
+.profile-setting-heading {
+  color: #01696e;
+  padding-top: 1rem;
+  font-size: 2.4rem;
+  position: relative;
+  top: -12px;
+}
+.profile-setting-heading-break-top {
+  width: 130%;
+  position: relative;
+  left: -255px;
+  top: -7px;
+  border: #01696e solid 0.8px;
+}
+.profile-setting-heading-break {
+  width: 130%;
+  position: relative;
+  left: -255px;
+  border: #01696e solid 0.8px;
+}
+.update-profile-heading {
+  font-size: 2.2rem;
+  color: #01696e;
+  position: relative;
+  left: -250px;
+  margin: 1.5rem 0;
+}
+.update-profile-name,
+.update-profile-email {
+  font-size: 1.6rem;
+  color: #01696e;
+  margin-bottom: 0.8rem;
+  position: relative;
+  left: -250px;
+}
+.update-profile-name-input,
+.update-profile-email-input {
+  font-size: 1.8rem;
+  color: #01696e;
+  margin-bottom: 1rem;
+  position: relative;
+  left: -240px;
+  border: #01696e solid 1.5px;
+  text-align: center;
+}
+.update-profile-submit-btn {
+  display: block;
+  position: relative;
+  left: 90px;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  font-family: "Gabarito";
+  color: aliceblue;
+  background-color: #01696e;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.update-profile-submit-btn:hover {
+  box-shadow: 4px 4px 4px #01696e;
+  font-size: 1.7rem;
+}
+.username-signin-container {
+  right: 170px;
+}
+.update-success-container {
+  height: 200px;
+  width: 400px;
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 1rem;
+  position: relative;
+  top: 35vh;
+  left: 31.6vw;
+  z-index: 100;
+}
+.loader {
+  border: 16px solid gainsboro;
+  border-top: 16px solid #01696e;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  position: relative;
+  top: 80px;
+  left: 45vw;
+  z-index: 100;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  transition: all 0.5s;
+  z-index: 99;
+}
+.hidden {
+  display: none;
+}

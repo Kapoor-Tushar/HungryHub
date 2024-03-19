@@ -1,0 +1,328 @@
+body {
+  margin: 0;
+  font-family: "Gabarito";
+}
+.heading-link-conatiner {
+  text-decoration: none;
+  cursor: pointer;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo {
+  font-size: 3rem;
+  display: inline;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+  color: #01696e;
+  font-family: "Gabarito";
+}
+.header-loaction-text {
+  display: inline;
+  position: relative;
+  bottom: 25px;
+  left: 10px;
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+.header-logo-img {
+  height: 70px;
+  width: 70px;
+}
+
+.login,
+.login:visited,
+.log-out,
+.log-out:visited {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Gabarito";
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  position: relative;
+  top: 28px;
+  color: black;
+}
+.profile,
+.profile:visited {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Gabarito";
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  position: relative;
+  top: 25px;
+  left: 8px;
+  margin: 15px 0;
+  color: black;
+}
+.login:hover,
+.log-out:hover,
+.profile:hover {
+  cursor: pointer;
+  color: #01696e;
+}
+.signup,
+.username {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Gabarito";
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 1.5rem;
+  position: relative;
+  top: 28px;
+  color: #01696e;
+}
+.signup:hover {
+  cursor: pointer;
+}
+.offers,
+.cart,
+.signin,
+.help,
+.signin:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  position: relative;
+  top: 20px;
+  padding-right: 80px;
+  color: black;
+}
+.username-signin {
+  text-decoration: none;
+  font-size: 1.4rem;
+  position: relative;
+  top: 20px;
+  padding-right: 80px;
+  color: #01696e;
+  cursor: pointer;
+}
+.username-signin-container {
+  position: fixed;
+  top: 50px;
+  right: 13%;
+  width: 150px;
+  height: 150px;
+  background-color: azure;
+  box-shadow: 4px 4px 4px gray;
+  border-radius: 5px;
+  z-index: 1000;
+}
+.offers:hover,
+.cart:hover,
+.signin:hover,
+.help:hover {
+  cursor: pointer;
+  color: #01696e;
+}
+
+.section-location {
+  background-color: aliceblue;
+  font-size: 3rem;
+  font-family: "Gabarito";
+  display: flex;
+  justify-content: space-between;
+}
+.section-location-changing-text {
+  padding: 30px;
+  padding-bottom: 0.5rem;
+}
+.section-location-text {
+  font-size: 2rem;
+  padding: 10px 30px;
+  padding-bottom: 0.5rem;
+}
+.form {
+  padding: 15px 30px;
+  padding-bottom: 0;
+  margin: 0.5;
+}
+.form-location-input {
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  border-style: solid;
+  border-color: #01696e;
+}
+.form-location-input::placeholder {
+  color: black;
+  opacity: 40%;
+  font-family: "Gabarito";
+}
+.form-location-btn {
+  font-family: "Gabarito";
+  position: relative;
+  right: 12px;
+  font-size: 1.76rem;
+  padding: 0.45rem;
+  color: aliceblue;
+  background-color: #01696e;
+  border-style: solid;
+  border-color: #01696e;
+}
+.form-location-btn:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 3px black;
+}
+.locate-me-div {
+  position: relative;
+  left: 30%;
+  top: 3%;
+  font-size: 1.2rem;
+}
+.locate-me-btn {
+  display: block;
+  margin: 5px;
+  font-size: 1.8rem;
+  padding: 0.15rem;
+  position: relative;
+  right: 10%;
+  font-family: "Gabarito";
+  color: aliceblue;
+  background-color: #01696e;
+  border-style: solid;
+  border-color: #01696e;
+}
+.my-location-symbol {
+  position: relative;
+  top: 3px;
+}
+.locate-me-btn:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 3px black;
+}
+.location-food-img-container {
+  margin: 0;
+}
+.location-food-img {
+  height: 300px;
+  width: 250px;
+  position: relative;
+  right: 230px;
+  padding: 10px 0;
+}
+.location-food-img1 {
+  height: 150px;
+  position: absolute;
+  right: 45px;
+  top: 93px;
+}
+.location-food-img2 {
+  height: 145px;
+  position: absolute;
+  right: 45px;
+  top: 250px;
+}
+.section2 {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #01696e;
+  color: aliceblue;
+  padding: 1.2rem;
+}
+.section-2-img1 {
+  height: 110px;
+  width: 110px;
+  filter: drop-shadow(4px 4px 6px black);
+  padding: 10px;
+  position: relative;
+  left: 30px;
+  border-radius: 50%;
+}
+.section-2-img2 {
+  height: 110px;
+  width: 110px;
+  filter: drop-shadow(4px 4px 6px black);
+  padding: 10px;
+  border-radius: 50%;
+}
+.section-2-img3 {
+  height: 110px;
+  width: 110px;
+  filter: drop-shadow(4px 4px 6px black);
+  padding: 10px;
+  position: relative;
+  left: 60px;
+  border-radius: 50%;
+}
+.section2-text {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.logout-success-container {
+  height: 200px;
+  width: 400px;
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 1rem;
+  position: relative;
+  top: 35vh;
+  left: 31.6vw;
+  z-index: 100;
+}
+.logout-loader {
+  border: 16px solid gainsboro;
+  border-top: 16px solid #01696e;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  position: relative;
+  top: 80px;
+  left: 45vw;
+  z-index: 100;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.logout-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  transition: all 0.5s;
+  z-index: 99;
+}
+.logout-hidden {
+  display: none;
+}
+.footer {
+  background-color: aliceblue;
+  font-size: 1.5rem;
+}
+.footer-logo-img {
+  height: 70px;
+  width: 70px;
+  padding: 10px;
+  padding-left: 28%;
+}
+.footer-logo-text {
+  display: inline;
+  font-size: 2rem;
+  position: relative;
+  bottom: 35px;
+  color: #01696e;
+}
+.footer-copyright-logo {
+  display: inline;
+  padding-left: 10%;
+  position: relative;
+  bottom: 40px;
+}

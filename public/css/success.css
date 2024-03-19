@@ -1,0 +1,80 @@
+.track-your-order-heading {
+  font-size: 3rem;
+  color: #01696e;
+  width: 50%;
+  padding-left: 37.5%;
+}
+.track-your-order-container {
+  background-color: aliceblue;
+  color: #01696e;
+  padding: 2rem;
+}
+.order_delivered-details,
+.order_pickup-details,
+.order_processed-details,
+.order_confirmed-details,
+.order_placed-details {
+  width: 30%;
+  position: relative;
+  left: 35%;
+  background-color: azure;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.order_placed-heading-status,
+.order_confirmed-heading-status,
+.order_processed-heading-status,
+.order_pickup-heading-status,
+.order_delivered-heading-status {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+.order_placed-heading,
+.order_confirmed-heading,
+.order_processed-heading,
+.order_pickup-heading,
+.order_delivered-heading {
+  margin-right: 20px;
+}
+.order_placed-status-tick {
+  font-size: 2rem;
+}
+.order-details-heading {
+  font-size: 2.5rem;
+  color: #01696e;
+  width: 50%;
+  padding-left: 41.5%;
+}
+.order-details-div_container {
+  background-color: aliceblue;
+  margin-bottom: 10px;
+  padding: 1rem;
+  color: #01696e;
+  font-size: 1.8rem;
+}
+.order-details-div-name-quantity {
+  width: 40%;
+  padding-left: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.order-details-div-price {
+  font-size: 1.2rem;
+  width: 40%;
+  padding-left: 30%;
+}
+.grand-total_price-div {
+  padding-top: 1rem;
+  text-align: center;
+}
+.above-footer {
+  min-height: 83.5%;
+}
+.hidden {
+  display: none;
+}

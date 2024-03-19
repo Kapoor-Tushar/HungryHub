@@ -1,0 +1,209 @@
+.restaurant-details {
+  padding: 50px 170px;
+  background-color: aliceblue;
+  color: #01696e;
+  /* font-family: "Gabarito"; */
+  /* font-size: 1.5rem; */
+}
+.restaurant-name-location {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.restaurant-name {
+  font-size: 2rem;
+}
+.restaurant-location {
+  font-size: 1.2rem;
+}
+.horizonatl-break_name-avgTime,
+.horizonatl-break_avgTime-CostForTwo-ratings,
+.horizonatl-break_ratings-menu {
+  border-top: 1px dotted #01696e;
+  margin-bottom: 20px;
+}
+.restaurant-avgTime-costForTwo {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.restaurant-avgTime-img,
+.restaurant-costForTwo-img,
+.restaurant-ratings-img,
+.menu-img {
+  height: 18px;
+  width: 18px;
+}
+
+.restaurant-ratings {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.restaurant-menu-heading {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+.horizonatl-break-menu {
+  border-top: 1px solid #01696e;
+  margin-bottom: 20px;
+}
+.menu-item {
+  height: 180px;
+}
+.item_type-logo-img {
+  height: 18px;
+  width: 18px;
+  margin: 0.15rem 0;
+  padding-left: 2px;
+}
+.item-name {
+  font-size: 1.5rem;
+  margin: 0.15rem 0;
+}
+.item-price {
+  font-size: 1.1rem;
+  margin: 0.15rem 0;
+  margin-bottom: 0.8rem;
+}
+.item-description {
+  color: rgb(107, 141, 141);
+  font-weight: 100;
+  max-width: 500px;
+}
+.item-image {
+  height: 100px;
+  width: 100px;
+  background-color: gainsboro;
+  position: relative;
+  left: 85%;
+  bottom: 105px;
+}
+.add-item {
+  position: relative;
+  left: 85.7%;
+  bottom: 115px;
+  font-family: "Gabarito";
+  color: #01696e;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #01696e;
+  font-size: 0.9rem;
+}
+.add-item-after-click {
+  position: relative;
+  left: 86%;
+  bottom: 115px;
+  width: 80px;
+  font-family: "Gabarito";
+  color: #01696e;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #01696e;
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-areas: "a b c";
+  gap: 2px;
+  background-color: aliceblue;
+}
+.decrease-item,
+.increase-item {
+  border: none;
+  cursor: pointer;
+  background-color: aliceblue;
+  color: #01696e;
+  font-weight: 700;
+}
+.quantity {
+  text-align: center;
+}
+.add-item:hover {
+  cursor: pointer;
+  box-shadow: 0.8px 0.8px 4px #015c61;
+}
+.item-break {
+  position: relative;
+  bottom: 90px;
+  border-top: 1px dotted #01696e;
+}
+.shop-info {
+  width: 50%;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  right: -25%;
+  color: rgb(107, 141, 141);
+  background-color: rgb(226, 242, 255);
+}
+.cart-conatiner {
+  background-color: gainsboro;
+  min-height: 30px;
+  min-width: 200px;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.cart-data-div {
+  /* overflow: scroll; */
+  display: flex;
+  flex-direction: column;
+}
+.cart-item-name-quantity {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-view-item-name {
+  text-align: left;
+}
+.cart-view-item-price {
+  text-align: left;
+  font-size: 0.8rem;
+}
+.checkout-div {
+  position: fixed;
+  bottom: 10;
+  left: 38%;
+  background-color: azure;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #01696e;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #015c61;
+}
+.checkout-login-div {
+  position: fixed;
+  bottom: 10;
+  left: 38%;
+  background-color: azure;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #01696e;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #015c61;
+}
+.sup-text {
+  font-size: 1rem;
+  height: 25px;
+  width: 25px;
+  background-color: #01696e;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  bottom: 7px;
+  color: azure;
+  text-align: center;
+  padding-top: 3px;
+  padding-right: 1px;
+}
+.hidden {
+  display: none;
+}

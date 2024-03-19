@@ -1,0 +1,36 @@
+.payment_fail-section {
+  min-height: 83.5%;
+}
+.payment_fail-message {
+  width: 60%;
+  background-color: aliceblue;
+  padding: 2rem;
+  position: absolute;
+  left: 20%;
+  top: 5%;
+  color: #01696e;
+  border-radius: 20px;
+}
+.sorry-div {
+  font-size: 5rem;
+  text-align: center;
+}
+.failure-message {
+  padding: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.failure-help {
+  font-size: 1.6rem;
+  padding: 1rem;
+  text-align: center;
+}
+.home-page-link {
+  font-size: 2rem;
+  padding: 1rem;
+  position: relative;
+  left: 25%;
+}
+.home-page-link:visited {
+  color: #01696e;
+}

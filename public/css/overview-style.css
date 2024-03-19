@@ -1,0 +1,201 @@
+.section1 {
+  background-color: aliceblue;
+  padding-bottom: 20px;
+}
+.section1-text {
+  font-size: 2rem;
+  padding: 10px;
+  color: #01696e;
+}
+.slider-container {
+  display: flex;
+}
+.section1-item-container:hover {
+  cursor: pointer;
+  padding: 5px;
+}
+.header-loaction-text:hover {
+  cursor: pointer;
+}
+.Woym-img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 20px;
+}
+.Woym-text {
+  text-align: center;
+  color: #01696e;
+  font-size: 1.4rem;
+}
+.section2-top-restaurant-title-text,
+.section3-restaurant-near-you-title-text {
+  font-size: 1.9rem;
+  padding: 10px;
+  color: #01696e;
+}
+
+.loaction-modal-window-container {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  padding: 3rem;
+  background-color: aliceblue;
+  height: 100%;
+  max-width: 100rem;
+  color: #01696e;
+  transform: translate(0%, 0%);
+  transition: all 0.5s;
+  z-index: 1000;
+}
+.btn-close-modal {
+  position: relative;
+  bottom: 30px;
+  left: 95%;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #01696e;
+  cursor: pointer;
+}
+.btn-close-modal:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.9);
+}
+.modal-location-input-text {
+  font-size: 1.4rem;
+  text-align: center;
+  border-style: solid;
+  border-color: #01696e;
+  font-family: "Gabarito";
+  position: relative;
+  left: -5px;
+}
+.modal-form-location-btn {
+  font-family: "Gabarito";
+  position: relative;
+  right: 10px;
+  top: -1px;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  color: aliceblue;
+  background-color: #01696e;
+  border-style: solid;
+  border-color: #01696e;
+}
+.modal-form-location-btn:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 3px black;
+}
+.Gps-btn {
+  padding: 1.2rem;
+  margin: 1rem;
+  border-style: solid;
+  cursor: pointer;
+  position: relative;
+  right: 13.5px;
+  font-size: 1.4rem;
+}
+.Gps-btn:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+.my-location-symbol {
+  padding-right: 10px;
+  position: relative;
+  top: 6px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  transition: all 0.5s;
+  z-index: 999;
+}
+.slider-container {
+  max-width: 100%;
+  position: relative;
+  /* padding: 0 150px; */
+  overflow: hidden;
+}
+.slider__btn {
+  position: relative;
+  bottom: 5px;
+  left: 65%;
+  /* z-index: 10; */
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #01696e;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.restaurants-slider-container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.slider__btn_rl {
+  position: relative;
+  bottom: 5px;
+  left: 54.6%;
+  border: none;
+  background: aliceblue;
+  font-family: inherit;
+  color: #01696e;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.restaurant-template-card {
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: stretch;
+  align-items: center;
+  padding: 10px;
+  width: 290px;
+  color: #01696e;
+  font-size: 1.4rem;
+}
+.restaurant-template-card:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.95);
+}
+.shop-image-cover {
+  background-color: aliceblue;
+  height: 180px;
+  width: 270px;
+}
+
+.shop-name {
+  font-size: 1.8rem;
+  padding-bottom: 5px;
+}
+.ratings-star {
+  height: 15px;
+  width: 15px;
+  padding-right: 4px;
+}
+.hidden {
+  display: none;
+}
+/* .shrink {
+  transition: all 0.2s ease-in-out;
+}
+
+.shrink:hover {
+  transform: scale(0.9);
+} */

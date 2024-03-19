@@ -1,0 +1,108 @@
+body {
+  color: #01696e;
+}
+.checkout-heading {
+  position: absolute;
+  right: 25%;
+  top: -9px;
+  font-size: 2.5rem;
+}
+.checkout-header-break {
+  border: 1px solid #01696e;
+}
+.checkout-rest_name-sec {
+  width: 100%;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.checkout-rest_item_details-sec {
+  background-color: aliceblue;
+  width: 80%;
+  border-radius: 10px;
+  margin: auto auto;
+  margin-top: 10px;
+  padding: 20px 20px;
+}
+.checkout-rest_item_name_quant-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.checkout-rest_item_name-span {
+  font-size: 1.7rem;
+  width: 35%;
+}
+.checkout-rest_item_quant-span {
+  font-size: 1.5rem;
+}
+.checkout-bill_summary-section {
+  background-color: aliceblue;
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+  margin: auto auto;
+  margin-top: 10px;
+}
+.checkout-bill_summary_heading-div {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.checkout-bill_summary-item_name_price-div,
+.checkout-bill_summary-total_price-div,
+.checkout-bill_summary-gst_price-div,
+.checkout-bill_summary-delivery_price-div,
+.checkout-bill_summary-platform_price-div,
+.checkout-bill_summary-grand_total_price-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.checkout-bill_summary-item_name-span,
+.checkout-bill_summary-total-without-tax-span,
+.checkout-bill_summary-gst-span,
+.checkout-bill_summary-delivery-span,
+.checkout-bill_summary-platform_fee-span,
+.checkout-bill_summary-total-span {
+  font-size: 1.4rem;
+  padding: 5px;
+}
+.checkout-bill_summary-quant-div {
+  font-size: 1rem;
+  padding-left: 5px;
+}
+.checkout-bill_summary-item_name-price-span,
+.checkout-bill_summary-total-price-without-tax-span,
+.checkout-bill_summary-gst-price-span,
+.checkout-bill_summary-delivery-price-span,
+.checkout-bill_summary-platform_fee-price-span,
+.checkout-bill_summary-total-price-span {
+  font-size: 1.2rem;
+}
+.checkout-pay-placeorder-sec {
+  background-color: azure;
+  position: fixed;
+  bottom: 0px;
+  left: 42%;
+  border-radius: 10px;
+  padding: 15px;
+  z-index: 10000;
+}
+.checkout-bill_summary-item-total-break {
+  border: 0.5px dotted #01696e;
+}
+.footer {
+  margin-top: 20px;
+}
+.checkout-placeorder-btn {
+  background-color: azure;
+  color: #01696e;
+  font-size: 1.4rem;
+  border: 2px solid #01696e;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-family: "Gabarito";
+}
+.checkout-placeorder-btn:hover {
+  box-shadow: 4px 4px 6px aliceblue;
+}

@@ -1,0 +1,41 @@
+.error-section {
+  height: 83.5%;
+}
+.error-code-status-message {
+  display: flex;
+  flex-direction: row;
+  color: #01696e;
+  background-color: aliceblue;
+  padding: 2rem;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  left: 25%;
+  top: 18%;
+  border-radius: 20px;
+}
+.error-code {
+  font-size: 13rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2rem;
+  height: 80%;
+  border-right: 2px solid #01696e;
+}
+.error-status-message {
+  padding-left: 1.5rem;
+}
+.error-status {
+  font-size: 4rem;
+}
+.error-message {
+  width: 70%;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+.home-page-link {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.home-page-link:visited {
+  color: #01696e;
+}

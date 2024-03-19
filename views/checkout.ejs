@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HungryHub | Hungry? Order Now.</title>
+    <link rel="icon" href="/img/HungryHub-Logo.PNG" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Montserrat:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/home-style.css" />
+    <link rel="stylesheet" href="/css/checkout-style.css" />
+    <script src="/js/checkout.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="https://js.stripe.com/v3/" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <a href="/"
+          ><img src="/img/HungryHub-Logo.PNG" class="header-logo-img"
+        /></a>
+        <div class="header-logo">HungryHub</div>
+      </div>
+      <h1 class="checkout-heading">
+        Checkout Cart <i style="font-size: 40px" class="fa">&#xf07a;</i>
+      </h1>
+    </header>
+    <hr class="checkout-header-break" />
+    <section class="checkout-rest_name-sec">
+      <div class="checkout-rest_name-div">Restaurant Name</div>
+    </section>
+    <section class="checkout-rest_item_details-sec">
+      <div class="checkout-cart-item-details-div"></div>
+    </section>
+    <section class="checkout-bill_summary-section">
+      <div class="checkout-bill_summary_heading-div">Bill Summary</div>
+      <div class="checkout-bill_summary-item_name_price_quant-div"></div>
+      <hr class="checkout-bill_summary-item-total-break" />
+      <div class="checkout-bill_summary-total_price-div">
+        <span class="checkout-bill_summary-total-without-tax-span">Total</span
+        ><span class="checkout-bill_summary-total-price-without-tax-span"
+          >Price</span
+        >
+      </div>
+      <div class="checkout-bill_summary-gst_price-div">
+        <span class="checkout-bill_summary-gst-span"
+          >GST and Restaurant charges</span
+        ><span class="checkout-bill_summary-gst-price-span">Price</span>
+      </div>
+      <div class="checkout-bill_summary-delivery_price-div">
+        <span class="checkout-bill_summary-delivery-span">Delivery charges</span
+        ><span class="checkout-bill_summary-delivery-price-span">₹ 40</span>
+      </div>
+      <div class="checkout-bill_summary-platform_price-div">
+        <span class="checkout-bill_summary-platform_fee-span">Platform Fee</span
+        ><span class="checkout-bill_summary-platform_fee-price-span"
+          >Price</span
+        >
+      </div>
+      <hr class="checkout-bill_summary-item-total-break" />
+      <div class="checkout-bill_summary-grand_total_price-div">
+        <span class="checkout-bill_summary-total-span">Grand Total</span
+        ><span class="checkout-bill_summary-total-price-span">Price</span>
+      </div>
+    </section>
+    <section class="checkout-pay-placeorder-sec">
+      <div class="checkout-pay-placeorder-div">
+        <button class="checkout-placeorder-btn">
+          <span class="checkout-btn-final-amount-span">
+            <span>Place order</span></span
+          >
+        </button>
+      </div>
+    </section>
+    <footer class="footer">
+      <div>
+        <img src="/img/HungryHub-Logo.PNG" class="footer-logo-img" />
+        <div class="footer-logo-text">HungryHub</div>
+        <div class="footer-copyright-logo">&copy; by HungryHub</div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HungryHub | Hungry? Order Now.</title>
+    <link rel="icon" href="/img/HungryHub-Logo.PNG" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/home-style.css" />
+    <link rel="stylesheet" href="/css/profile-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Montserrat:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="/js/profile-hover.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="/js/logout.js" defer></script>
+    <script src="/js/profile-update.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <a href="/" class="heading-container"
+          ><img src="/img/HungryHub-Logo.PNG" class="header-logo-img" />
+          <div class="heading-text">HungryHub</div></a
+        >
+      </div>
+      <div>
+        <%if(!locals.user){%>
+        <a class="signin" href="/login">Sign in</a>
+        <span class="help">Help</span>
+        <span class="cart">Cart</span>
+        <%} else{%>
+        <span class="username-signin"
+          ><%=locals.user.name.split(' ')[0]%>
+          <div class="username-signin-container hidden">
+            <a class="profile" href="/profile">Profile</a>
+            <a class="log-out">Log Out</a>
+          </div>
+        </span>
+
+        <span class="help">Help</span>
+
+        <%}%>
+      </div>
+    </header>
+    <section class="content-conatiner">
+      <div class="side-options-container">
+        <a class="profile-link">Profile</a>
+        <!-- <a class="orders-link">My Orders</a>
+        <a class="billing-link">Billing</a> -->
+      </div>
+      <div class="profile-section-content-conatiner">
+        <hr class="profile-setting-heading-break-top" />
+        <div class="profile-setting-heading">Your Account Settings</div>
+        <hr class="profile-setting-heading-break" />
+        <div class="update-profile-heading">Update Your Details</div>
+        <form class="update-form">
+          <div class="update-profile-name">Name:</div>
+          <%if(!locals.user){%>
+          <input
+            type="text"
+            maxlength="20"
+            placeholder="Tushar"
+            class="update-profile-name-input"
+          /><%} else{%> <input type="text" maxlength="20" placeholder=
+          <%=locals.user.name.split(" ")[0]%> class="update-profile-name-input"
+          /> <%}%>
+          <div class="update-profile-email">Email:</div>
+          <input
+            type="email"
+            placeholder="new@hungryhub.com"
+            class="update-profile-email-input"
+          />
+          <input
+            type="submit"
+            value="Update"
+            class="update-profile-submit-btn"
+          />
+        </form>
+      </div>
+    </section>
+    <section class="overlay hidden">
+      <div class="update-success-container">Updating Details!</div>
+      <div class="loader"></div>
+    </section>
+    <section class="logout-overlay logout-hidden">
+      <div class="logout-success-container">Logged out Successfully!</div>
+      <div class="logout-loader"></div>
+    </section>
+    <footer class="footer">
+      <img src="/img/HungryHub-Logo.PNG" class="footer-logo-img" />
+      <div class="footer-logo-text">HungryHub</div>
+      <div class="footer-copyright-logo">&copy; by HungryHub</div>
+    </footer>
+  </body>
+</html>

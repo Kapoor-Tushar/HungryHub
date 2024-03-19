@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HungryHub | Hungry? Order Now.</title>
+    <link rel="icon" href="/img/HungryHub-Logo.PNG" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Montserrat:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/home-style.css" />
+    <link rel="stylesheet" href="/css/success.css" />
+    <script src="/js/success.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="https://js.stripe.com/v3/" defer></script>
+  </head>
+  <body>
+    <section class="above-footer">
+      <div class="track-your-order-heading">Track Your Order</div>
+      <div class="track-your-order-container">
+        <div class="order_placed-details">
+          <div class="order_placed-heading-status">
+            <div class="order_placed-heading">Order Placed</div>
+            <div class="order_placed-status-tick"></div>
+          </div>
+          <div class="order_placed-sub_heading">
+            We have recieved your order
+          </div>
+        </div>
+        <div class="order_confirmed-details hidden">
+          <div class="order_confirmed-heading-status">
+            <div class="order_confirmed-heading">Order Confirmed</div>
+            <div class="order_confirmed-status-tick"></div>
+          </div>
+          <div class="order_confirmed-sub_heading">
+            Your order has been confirmed
+          </div>
+        </div>
+        <div class="order_processed-details hidden">
+          <div class="order_processed-heading-status">
+            <div class="order_processed-heading">Order Processed</div>
+            <div class="order_processed-status-tick"></div>
+          </div>
+          <div class="order_processed-sub_heading">
+            Restaurant is preparing your order
+          </div>
+        </div>
+        <div class="order_pickup-details hidden">
+          <div class="order_pickup-heading-status">
+            <div class="order_pickup-heading">Order Picked Up</div>
+            <div class="order_pickup-status-tick"></div>
+          </div>
+          <div class="order_pickup-sub_heading">
+            Your order has been picked up the delivery partner
+          </div>
+        </div>
+        <div class="order_delivered-details hidden">
+          <div class="order_delivered-heading-status">
+            <div class="order_delivered-heading">Order Delivery</div>
+            <div class="order_delivered-status-tick"></div>
+          </div>
+          <div class="order_delivered-sub_heading hidden">
+            Your order is delivered successfully!
+          </div>
+        </div>
+      </div>
+      <div class="order-details-heading">Order Details</div>
+      <div class="order-details-div_container"></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div>
+        <img src="/img/HungryHub-Logo.PNG" class="footer-logo-img" />
+        <div class="footer-logo-text">HungryHub</div>
+        <div class="footer-copyright-logo">&copy; by HungryHub</div>
+      </div>
+    </footer>
+  </body>
+</html>

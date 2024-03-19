@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HungryHub | Hungry? Order Now.</title>
+    <!-- Changed the address of static files as we have mentioned a route to our express app to where to searc for static files which is /public/img or /public/css or /public/js -->
+    <link rel="icon" href="/img/HungryHub-Logo.PNG" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/home-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Montserrat:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/signup-style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="/js/signup.js" defer></script>
+    <script src="/js/logout.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="heading-link-conatiner">
+        <div>
+          <img src="/img/HungryHub-Logo.PNG" class="header-logo-img" />
+          <div class="header-logo">HungryHub</div>
+        </div>
+      </a>
+      <div>
+        <%if(!locals.user){%>
+        <a class="login" href="/login">Login</a>
+        <a class="signup" href="/signup">Sign up</a>
+        <%} else{%>
+        <span class="username"><%=locals.user.name.split(' ')[0]%></span>
+        <a class="log-out">Log Out</a>
+        <%}%>
+      </div>
+    </header>
+    <section class="signup-container">
+      <div class="signup-heading">CREATE YOUR ACCOUNT!</div>
+      <hr class="signup-heading-break" />
+      <form class="signup-form">
+        <div class="name-label">Name</div>
+        <input type="text" placeholder="Tushar" required class="name-input" />
+        <div class="email-label">Email Id</div>
+        <input
+          type="email"
+          placeholder="abc@gmail.com"
+          required
+          class="email-input"
+        />
+        <div class="password-label">Password</div>
+        <input
+          type="password"
+          placeholder="***********"
+          required
+          minlength="8"
+          class="password-input"
+          required
+        />
+        <div class="password-confirm-label">Password Confirm</div>
+        <input
+          type="password"
+          placeholder="***********"
+          required
+          minlength="8"
+          class="password-confirm-input"
+          required
+        />
+        <input type="submit" class="signup-submit-btn" value="SIGN UP" />
+      </form>
+    </section>
+    <section class="overlay hidden">
+      <div class="signup-success-container">Generating New Account...</div>
+      <div class="loader"></div>
+    </section>
+    <footer class="footer">
+      <img src="/img/HungryHub-Logo.PNG" class="footer-logo-img" />
+      <div class="footer-logo-text">HungryHub</div>
+      <div class="footer-copyright-logo">&copy; by HungryHub</div>
+    </footer>
+  </body>
+</html>

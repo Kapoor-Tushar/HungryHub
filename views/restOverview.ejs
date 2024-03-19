@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HungryHub | Hungry? Order Now.</title>
+    <link rel="icon" href="/img/HungryHub-Logo.PNG" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Montserrat:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/home-style.css" />
+    <link rel="stylesheet" href="/css/overview-style.css" />
+    <link rel="stylesheet" href="/css/restOverview-style.css" />
+    <script src="/js/loaction-modal.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="/js/logout.js" defer></script>
+    <script src="/js/profile-hover.js" defer></script>
+    <script src="/js/cart-restaurant-page.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <a href="/"
+          ><img src="/img/HungryHub-Logo.PNG" class="header-logo-img"
+        /></a>
+        <div class="header-loaction-text"><%=location%></div>
+      </div>
+      <div>
+        <%if(!locals.user){%>
+        <a class="signin" href="/login">Sign in</a>
+        <%} else{%>
+        <span class="offers">Offers</span>
+        <span class="username-signin"
+          ><%=locals.user.name.split(' ')[0]%>
+          <div class="username-signin-container hidden">
+            <a class="profile" href="/profile">Profile</a>
+            <a class="log-out">Log Out</a>
+          </div>
+        </span>
+        <%}%>
+        <!-- Here the offers tab will show the promoCodes provided by the restaurants -->
+        <a class="help" href="/help">Help</a>
+        <span class="cart"
+          >Cart
+          <div class="cart-conatiner hidden">
+            <div class="empty-cart-div">Cart is empty</div>
+            <div class="cart-data-div"></div>
+          </div>
+        </span>
+      </div>
+    </header>
+
+    <div class="restaurant-details">
+      <div class="restaurant-name-location">
+        <div class="restaurant-name"><%=data.name%></div>
+        <div class="restaurant-location"><%=data.location%></div>
+      </div>
+      <div class="horizonatl-break_name-avgTime"></div>
+      <div class="restaurant-avgTime-costForTwo">
+        <div class="restaurant-avgTime">
+          <img src="/img/clock.PNG" class="restaurant-avgTime-img" />
+          <%=data.AvgTimeForOrderProcess%> mins
+        </div>
+        <div>||</div>
+        <div class="restaurant-costForTwo">
+          <img src="/img/rupee.PNG" class="restaurant-costForTwo-img" />
+          200 for two
+        </div>
+      </div>
+      <div class="horizonatl-break_avgTime-CostForTwo-ratings"></div>
+      <div class="restaurant-ratings">
+        <img src="/img/ratings-star.PNG" class="restaurant-ratings-img" />
+        <%=data.ratingsAverage%> / 5
+      </div>
+      <div class="horizonatl-break_ratings-menu"></div>
+      <div class="restaurant-menu-heading">
+        <img src="/img/menu.PNG" class="menu-img" />Menu
+      </div>
+      <div class="horizonatl-break-menu"></div>
+      <div class="menu-items-container">
+        <% data.menu[0].items.forEach((item, index) => { %>
+        <div class="menu-item">
+          <% if(item.itemType == "veg"){%>
+          <div><img src="/img/veg.PNG" class="item_type-logo-img" /></div>
+          <%} else{%>
+          <div><img src="/img/non-veg.PNG" class="item_type-logo-img" /></div>
+          <%}%>
+          <div class="item-name"><%=item.name%></div>
+          <div class="item-price">&#8377; <%=item.price%></div>
+          <div class="item-description"><%=item.itemDescription%></div>
+          <div class="item-image"><%=item.itemImage%></div>
+          <button class="add-item">+ Add Item</button>
+          <div class="add-item-after-click hidden">
+            <button class="decrease-item">-</button
+            ><span class="quantity">0</span
+            ><button class="increase-item">+</button>
+          </div>
+          <hr / class="item-break">
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    <section class="logout-overlay logout-hidden">
+      <div class="logout-success-container">Logged out Successfully!</div>
+      <div class="logout-loader"></div>
+    </section>
+    <footer class="footer">
+      <div class="shop-info">
+        <div>FSSAI Licence Number: <%=data.menu[0].FSSAILicenceNumber%></div>
+        <hr />
+        <div>GST Number: <%=data.menu[0].GSTNumber%></div>
+      </div>
+      <div>
+        <img src="/img/HungryHub-Logo.PNG" class="footer-logo-img" />
+        <div class="footer-logo-text">HungryHub</div>
+        <div class="footer-copyright-logo">&copy; by HungryHub</div>
+      </div>
+    </footer>
+    <div class="loaction-modal-window-container hidden">
+      <button class="btn-close-modal">&times;</button>
+      <form class="modal-location-form-container">
+        <input
+          type="text"
+          placeholder="Enter the location"
+          class="modal-location-input-text"
+        />
+        <input
+          type="submit"
+          class="modal-form-location-btn"
+          value="Find Food"
+        />
+      </form>
+      <div class="Gps-btn">
+        <i class="material-icons my-location-symbol">&#xe55c;</i>Use GPS to find
+        Location
+      </div>
+    </div>
+    <% if (locals.user) { %>
+    <!-- User is logged in -->
+    <a class="checkout-div hidden">
+      Checkout >>>
+      <div class="sup-text">1</div></a
+    >
+    <% } else { %>
+    <a class="checkout-login-div hidden"> Please Login in to place order</a>
+    <% } %>
+    <div class="overlay hidden"></div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HungryHub | Hungry? Order Now.</title>
+    <link rel="icon" href="/img/HungryHub-Logo.PNG" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/restItemOverview-style.css" />
+    <link rel="stylesheet" href="/css/home-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Montserrat:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="/js/profile-hover.js" defer></script>
+    <script src="/js/loaction-modal.js" defer></script>
+    <script src="/js/slider.js" defer></script>
+    <script src="/js/restaurants-render.js" defer></script>
+    <script src="/js/restaurants-render-itemClick.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="/js/logout.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <a href="/"
+          ><img src="/img/HungryHub-Logo.PNG" class="header-logo-img"
+        /></a>
+        <div class="header-loaction-text"><%=data%></div>
+      </div>
+      <div>
+        <!-- <span class="offers">Offers</span> -->
+        <%if(!locals.user){%>
+        <a class="signin" href="/login">Sign in</a>
+        <a class="help" href="/help">Help</a>
+        <%} else{%>
+        <span class="username-signin"
+          ><%=locals.user.name.split(' ')[0]%>
+          <div class="username-signin-container hidden">
+            <a class="profile" href="/profile">Profile</a>
+            <a class="log-out">Log Out</a>
+          </div>
+        </span>
+
+        <a class="help" href="/help">Help</a>
+
+        <%}%>
+      </div>
+    </header>
+    <section class="section3-restaurant-near-you">
+      <div class="section3-restaurant-near-you-title-text">
+        Top <%=category%> Restaurants in your location <%=shops.length%>
+        <%if(shops.length>4){%>
+        <button class="slider__btn_rl slider__btn--left_ryl">&larr;</button>
+        <button class="slider__btn_rl slider__btn--right_ryl">&rarr;</button>
+        <%}%>
+      </div>
+      <div class="restaurants-slider-container">
+        <% shops.forEach((shop, index) => { %>
+        <div class="restaurant-slide your-location-restaurant-slide">
+          <div
+            class="restaurant-template-card your-location-restaurant-template-card"
+          >
+            <div class="shop-image-cover"><%= shop.imageCover %></div>
+            <div class="shop-details">
+              <div class="shop-name"><%= shop.name %></div>
+              <div class="shop-rating-avg_time">
+                <img src="/img/ratings-star.PNG" class="ratings-star" /><%=
+                shop.ratingsAverage %> || <%= shop.AvgTimeForOrderProcess %>
+                mins
+              </div>
+              <div class="shop-type"><%= shop.typeOfRestaurant %></div>
+              <div class="shop-location"><%= shop.location %></div>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+    <section class="logout-overlay logout-hidden">
+      <div class="logout-success-container">Logged out Successfully!</div>
+      <div class="logout-loader"></div>
+    </section>
+    <footer class="footer">
+      <img src="/img/HungryHub-Logo.PNG" class="footer-logo-img" />
+      <div class="footer-logo-text">HungryHub</div>
+      <div class="footer-copyright-logo">&copy; by HungryHub</div>
+    </footer>
+    <div class="loaction-modal-window-container hidden">
+      <button class="btn-close-modal">&times;</button>
+      <form class="modal-location-form-container">
+        <input
+          type="text"
+          placeholder="Enter the location"
+          class="modal-location-input-text"
+        />
+        <input
+          type="submit"
+          class="modal-form-location-btn"
+          value="Find Food"
+        />
+      </form>
+      <div class="Gps-btn">
+        <i class="material-icons my-location-symbol">&#xe55c;</i>Use GPS to find
+        Location
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+  </body>
+</html>

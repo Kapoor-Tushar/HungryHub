@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HungryHub | Hungry? Order Now.</title>
+    <!-- Changed the address of static files as we have mentioned a route to our express app to where to searc for static files which is /public/img or /public/css or /public/js -->
+    <link rel="icon" href="/img/HungryHub-Logo.PNG" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/home-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Montserrat:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="/js/main-script.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="/js/logout.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/bigdatacloudapi/js-reverse-geocode-client@latest/bigdatacloud_reverse_geocode.min.js"
+      type="text/javascript"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <img src="/img/HungryHub-Logo.PNG" class="header-logo-img" />
+        <div class="header-logo">HungryHub</div>
+      </div>
+      <div>
+        <!-- This form of inline js was creating a chance of XSS, so we had to remove it. -->
+        <!-- <span class="login" onclick="window.location.href='/login';"
+          >Login</span
+        > -->
+        <%if(!locals.user){%>
+        <a class="login" href="/login">Login</a>
+        <a class="signup" href="/signup">Sign up</a>
+        <%} else{%>
+        <a class="username" href="/profile"
+          ><%=locals.user.name.split(' ')[0]%></a
+        >
+        <a class="log-out">Log Out</a>
+        <%}%>
+      </div>
+    </header>
+    <section class="section-location">
+      <div>
+        <div class="section-location-changing-text">Hungry?</div>
+        <!-- <div>Late Night at office?</div>
+      <div>Unexpected Guests?</div>
+      <div>Cooking gone wrong?</div> -->
+        <div class="section-location-text">
+          Order food from your favourite restaurants near you
+        </div>
+        <div class="form">
+          <input
+            type="text"
+            name="loaction"
+            placeholder="Enter your delivery location"
+            class="form-location-input"
+          />
+          <button class="form-location-btn">Find Food</button>
+        </div>
+        <div class="locate-me-div">
+          OR
+          <button class="locate-me-btn">
+            Locate Me <i class="material-icons my-location-symbol">&#xe55c;</i>
+          </button>
+        </div>
+      </div>
+      <div class="location-food-img-container">
+        <img src="/img/location-food-img.PNG" class="location-food-img" />
+        <img src="/img/location-food-img1.PNG" class="location-food-img1" />
+        <img src="/img/location-food-img2.PNG" class="location-food-img2" />
+      </div>
+    </section>
+    <section class="section2">
+      <div>
+        <img src="/img/no-minimum-order.PNG" class="section-2-img1" />
+        <div class="section2-text">No Minimum Order</div>
+      </div>
+      <div>
+        <img src="/img/best-discounts.PNG" class="section-2-img2" />
+        <div class="section2-text">Best Offers</div>
+      </div>
+      <div>
+        <img src="/img/fast-delivery.PNG" class="section-2-img3" />
+        <div class="section2-text">Lightning-Fast Delivery</div>
+      </div>
+    </section>
+    <section class="logout-overlay logout-hidden">
+      <div class="logout-success-container">Logged out Successfully!</div>
+      <div class="logout-loader"></div>
+    </section>
+    <footer class="footer">
+      <img src="/img/HungryHub-Logo.PNG" class="footer-logo-img" />
+      <div class="footer-logo-text">HungryHub</div>
+      <div class="footer-copyright-logo">&copy; by HungryHub</div>
+    </footer>
+  </body>
+</html>

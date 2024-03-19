@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HungryHub | Hungry? Order Now.</title>
+    <link rel="icon" href="/img/HungryHub-Logo.PNG" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Montserrat:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/home-style.css" />
+    <link rel="stylesheet" href="/css/error.css" />
+    <!-- <script src="/js/success.js" defer></script> -->
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="https://js.stripe.com/v3/" defer></script> -->
+  </head>
+  <body>
+    <section class="error-section">
+      <div class="error-code-status-message">
+        <div class="error-code"><%=ErrorCode%></div>
+        <div class="error-status-message">
+          <div class="error-status"><%=ErrorStatus%></div>
+          <div class="error-message"><%=ErrorMessage%></div>
+          <a class="home-page-link" href="/"
+            ><span>&#8592;</span>
+            <span lass="home-page-heding">GO TO HOME PAGE</span></a
+          >
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div>
+        <img src="/img/HungryHub-Logo.PNG" class="footer-logo-img" />
+        <div class="footer-logo-text">HungryHub</div>
+        <div class="footer-copyright-logo">&copy; by HungryHub</div>
+      </div>
+    </footer>
+  </body>
+</html>
